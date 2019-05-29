@@ -55,6 +55,7 @@ branch: develop
 org_name: my-github-org
 
 # Build settings
+highlighter: true
 markdown: kramdown
 
 # Travis Support
@@ -94,7 +95,7 @@ menu:
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.
-non_global_metadata: indicator.national_metadata
+#non_global_metadata: indicator.national_metadata
 non_global_metadata: Metadata
 
 
