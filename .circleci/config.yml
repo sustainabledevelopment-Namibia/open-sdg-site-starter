@@ -45,7 +45,7 @@ jobs:
           command: bash scripts/test/html_proofer_prod.sh
       - add_ssh_keys:
           fingerprints:
-            - "PASTE_PRODUCTION_FINGERPRINT_HERE"
+            - "a5:66:db:89:8c:b0:80:2d:f8:a0:02:84:a1:de:77:eb"
       - run:
           name: Deploy to Github
           command: bash scripts/deploy/circleci/deploy_prod.sh
@@ -72,7 +72,7 @@ jobs:
           command: bash scripts/test/html_proofer_staging.sh
       - add_ssh_keys:
           fingerprints:
-            - "PASTE_STAGING_FINGERPRINT_HERE"
+            - "a5:66:db:89:8c:b0:80:2d:f8:a0:02:84:a1:de:77:eb"
       - run:
           name: Deploy to Github
           command: bash scripts/deploy/circleci/deploy_staging.sh
@@ -87,12 +87,13 @@ workflows:
                 - master
                 - develop
                 - gh-pages
+                - prod-pages
   deploy:
     jobs:
-      #- deploy_prod:
-      #    filters:
-      #      branches:
-      #        only: master
+      - deploy_prod:
+          filters:
+            branches:
+              only: master
       - deploy_staging:
           filters:
             branches:
@@ -100,7 +101,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          cron: "2 * * * *"
           filters:
             branches:
               only: develop
