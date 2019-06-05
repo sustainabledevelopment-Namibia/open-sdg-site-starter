@@ -13,6 +13,7 @@
 
 baseurl: ""
 url: ""
+data_dir: data
 environment: production
 # Replace my-github-org and open-sdg-data-starter as needed.
 remotedatabaseurl: "https://sustainabledevelopment-Namibia.github.io/data"
