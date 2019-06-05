@@ -6,11 +6,11 @@
 # This is the Github organisation or username of your fork. For example, if
 # your fork is located at https://github.com/xyz/open-sdg-site-starter, then
 # you should put "xyz" here. Changing this is required.
-GH_ORG_PROD="CHANGEME"
+GH_ORG_PROD="sustainabledevelopment-Namibia"
 # These variables only control the name/email on the automated Git commits.
 # Changing this is optional.
 GH_NAME="CircleCI"
-GH_EMAIL="no-reply@example.com"
+GH_EMAIL="mhilongwa@nsa.org.na"
 ###################################
 
 # There is probably no need to modify anything below this point.
@@ -23,7 +23,7 @@ sed -i -e 's/Host gh-prod/Host gh-prod\n  HostName github.com/g' ~/.ssh/config
 git clone git@gh-prod:$GH_ORG_PROD/$CIRCLE_PROJECT_REPONAME.git out
 
 cd out
-git checkout gh-pages || git checkout --orphan gh-pages
+git checkout prod-pages || git checkout --orphan prod-pages
 git rm -rfq .
 cd ..
 
@@ -34,6 +34,6 @@ mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
 cd out
 
 git add -A
-git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+git commit -m "Automated production build: ${CIRCLE_SHA1}" --allow-empty
 
-git push origin gh-pages
+git push origin prod-pages
