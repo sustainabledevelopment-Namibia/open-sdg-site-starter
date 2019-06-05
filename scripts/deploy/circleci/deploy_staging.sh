@@ -6,11 +6,11 @@
 # This is the Github organisation or username of your fork. For example, if
 # your fork is located at https://github.com/xyz/open-sdg-site-starter, then
 # you should put "xyz" here. Changing this is required.
-GH_ORG_STAGING="Veijo-sdg"
+GH_ORG_STAGING="sustainabledevelopment-Namibia"
 # These variables only control the name/email on the automated Git commits.
 # Changing this is optional.
 GH_NAME="CircleCI"
-GH_EMAIL="vshikongo@nsa.org.na"
+GH_EMAIL="mhilongwa@nsa.org.na"
 ###################################
 
 # There is probably no need to modify anything below this point.
