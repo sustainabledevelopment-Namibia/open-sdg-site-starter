@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /_pages/about/
+permalink: /about/
 layout: page
 ---
 
