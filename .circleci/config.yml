@@ -72,7 +72,7 @@ jobs:
           command: bash scripts/test/html_proofer_staging.sh
       - add_ssh_keys:
           fingerprints:
-            - "cb:65:ba:2e:ae:95:d4:89:ed:7f:b9:46:16:63:c7:b7"
+            - "a5:66:db:89:8c:b0:80:2d:f8:a0:02:84:a1:de:77:eb"
       - run:
           name: Deploy to Github
           command: bash scripts/deploy/circleci/deploy_staging.sh
@@ -100,7 +100,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "5 * * * *"
+          cron: "1 * * * *"
           filters:
             branches:
               only: develop
