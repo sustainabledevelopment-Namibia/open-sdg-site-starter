@@ -1,8 +1,8 @@
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">{{ t.header.skip_link }}</a>
-<div id="disclaimer">
-  {% include components/dev-disclaimer.html %}
+<!--<div id="disclaimer">
+ {% include components/dev-disclaimer.html %}
 </div>
-
+-->
 <header role="banner">
   <div class="navbar-brand-container">
     <div class="container">
@@ -47,12 +47,12 @@
 
               {% if page.url == item.path %}
                 <li class="nav-link active">
-                  <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
+              <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }} </a>
                 </li>
               {% else %}
 
                 <li class="nav-link">
-                  <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }} </a>
+                  <a href="{{ site.baseurl }}{{ baseurl_folder }}{{ item.path }}">{{ item.translation_key | t }}</a>
                 </li>
               {%- endif -%}
             {%- endfor -%}
