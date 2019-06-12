@@ -30,8 +30,9 @@ $font_open_sans:'Open Sans', sans-serif;
 
 /* --- GENERAL ---*/
 body{
-  background: $color_mid_light;
+  background: $color_delta;
   font-family: $font_open_sans;
+  padding: 0 !important;
 }
 
 a{
@@ -65,7 +66,6 @@ header{
 
   //header section with logos
   .navbar-brand-container{
-    padding: 5px auto;
 
     .container{min-height: 100px;}
 
@@ -75,6 +75,7 @@ header{
 
       img{
         width: 70px;
+		padding-right: 15px;
       }
     }
 
@@ -106,6 +107,7 @@ header{
     .navbar ul.navbar-nav{
       float: left;
       margin-top:0px;
+	   // width: 100%;
 
       li{
 
@@ -133,6 +135,17 @@ header{
     }
 
   }//.navbar-menu-container
+  @media screen and (max-width: 768px){
+    .navbar-nav {
+      width: 100%;
+    }
+
+    #main-nav > .navbar-search-container  {
+     padding-top: 0;
+      width: 100% !important;
+  }
+
+  }
 
 
   //search in navbar. This search requires navbar class
@@ -147,6 +160,7 @@ header{
     .navbar-search-container #search {
        margin-top: 0;
     }
+    
   }
 
 }//header
