@@ -49,4 +49,9 @@ email_contacts:
   questions: SUulenga@nsa.org.na
   suggestions: SUulenga@nsa.org.na
   functional: SUulenga@nsa.org.na
+# International Support
+# Eg name: Australia and adjective: Australian
+country:
+  name: Namibia
+  adjective: Namibian
 
