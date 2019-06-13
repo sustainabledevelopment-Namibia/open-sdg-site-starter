@@ -90,8 +90,8 @@ menu:
     translation_key: menu.about
   #- path: /guidance/
   #  translation_key: menu.guidance
-  - path: /faq/
-    translation_key: menu.faq
+  #- path: /faq/
+  #  translation_key: menu.faq
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.
