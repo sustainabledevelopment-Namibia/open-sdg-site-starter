@@ -41,3 +41,12 @@ jekyll_get_json:
 analytics:
   # For production, you likely want to enter a Google Analytics code below.
   ga_prod: ''
+# Social media accounts.
+twitter: 'namstatsagency'
+
+# Replace the email addresses below.
+email_contacts:
+  questions: SUulenga@nsa.org.na
+  suggestions: SUulenga@nsa.org.na
+  functional: SUulenga@nsa.org.na
+
