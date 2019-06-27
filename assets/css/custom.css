@@ -82,7 +82,10 @@ header {
     header .navbar-search-container #search {
       margin-top: 0; } }
 
-/* --- FRONT-PAGE ---*/
+/* --- BUTTONS---*/
+#chartSelectionDownload a:first-child {
+  display: none !important; }
+
 /* --- FOOTER ---*/
 .footer-container, footer {
   width: 100%;
