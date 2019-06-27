@@ -165,9 +165,10 @@ header{
 
 }//header
 
-/* --- FRONT-PAGE ---*/
-
-
+/* --- BUTTONS---*/
+#chartSelectionDownload a:first-child{
+	display:none !important;
+}
 
 
 /* --- FOOTER ---*/
