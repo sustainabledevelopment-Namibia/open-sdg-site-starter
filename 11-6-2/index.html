@@ -92,7 +92,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/assets/css/default.css?v=20190613103016">
+        <link rel="stylesheet" href="/assets/css/default.css?v=20190704145534">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -100,7 +100,7 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' />
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/assets/css/custom.css?v=20190613103016"></head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"><link rel="stylesheet" href="/assets/css/custom.css?v=20190704145534"></head>
 <body class="language-en">
 <!-- <div class="container"> -->
 
@@ -257,12 +257,12 @@ var translations = {
 
 	  <div class="row">
 		<div class="col-xs-12">
-		  <h2>Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)</h2>
+		  <h2>Annual mean levels of fine particulate matter (PM2.5) in cities (population weighted)</h2>
 		</div>
 	  </div>
 
 	  <div class="row" id="indicatorData" data-indicatorid='indicator_11-6-2' data-id="11-6-2" data-country=""
-	  data-charttitle="Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="false">
+	  data-charttitle="Annual mean levels of fine particulate matter (PM2.5) in cities (population weighted)" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="bar" data-geocoderegex="" data-showmap="false">
 		
 		<div class="col-md-3">
 		  <div id="toolbar">
@@ -297,36 +297,8 @@ var translations = {
       <caption></caption>
       <thead>
         
-        
-        <th scope="col">Year</th>
-        
-        
-        
-        <th scope="col">Units</th>
-        
-        
-        
-        <th scope="col" class="table-value">Value</th>
-        
-        
       </thead>
       <tbody>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td>g/m3</td>
-          
-          
-          
-          <td class="table-value">22.59</td>
-          
-          
-        </tr>
         
       </tbody>
     </table>
@@ -373,7 +345,34 @@ var translations = {
     
     <div class="plot-container">
         
-<canvas></canvas>
+
+<canvas id="barchart-11-6-2" class="ct-chart ct-major-eleventh"></canvas>
+<script>
+  // 3.5.2
+  // 1.5.2 // 2 bars
+  // 4.b.1 // 3 bars
+  var chartInfo = chartDataProcessor.getChartInfo(null),
+      chartInstance = new Chart(document.getElementById('barchart-11-6-2'), {
+      type: 'bar',
+      data: chartInfo,
+      options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              ticks: {
+                  suggestedMin: 0
+              }
+            }]
+          },
+          legend: {
+            display: false
+         },
+      }
+  });
+
+</script>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -444,7 +443,7 @@ var translations = {
         <th scope="row">Global indicator definition </th>
         <td>
           
-            Annual mean levels of fine particulate matter (e.g.�PM2.5 and PM10) in cities (population weighted)
+            Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)
           
         </td>
         </tr>
@@ -517,50 +516,6 @@ var translations = {
         <td>
           
             WHO
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/sustainabledevelopment-Namibia/data/commit/6e3a9b13b7310d56e118c8109deac5695722e78c" target="_blank">
-                2019-06-12: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/sustainabledevelopment-Namibia/data/commit/219f4a2b15eae0ad88671ed9e2f21fd4d65d9317" target="_blank">
-                2019-06-13: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
           
         </td>
         </tr>
@@ -862,8 +817,6 @@ var translations = {
   
   
   
-  
-  
 </table>
 
 				  </article>
@@ -882,8 +835,6 @@ var translations = {
     <div class="col-md-6">
       
       <table class="table table-hover">
-  
-  
   
   
   
@@ -1195,7 +1146,7 @@ ga('send', 'pageview');
 <script>
   var remoteDataBaseUrl = 'https://sustainabledevelopment-Namibia.github.io/data';
 </script>
-<script src='/assets/js/sdg.js?v=20190613103016'></script>
+<script src='/assets/js/sdg.js?v=20190704145534'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
