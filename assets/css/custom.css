@@ -82,8 +82,11 @@ header {
     header .navbar-search-container #search {
       margin-top: 0; } }
 
-/* --- BUTTONS---*/
+/* --- BUTTONS removed---*/
 #chartSelectionDownload a:first-child {
+  display: none !important; }
+
+#selectionTableFooter a:first-child {
   display: none !important; }
 
 /* --- FOOTER ---*/
