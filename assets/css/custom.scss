@@ -165,11 +165,13 @@ header{
 
 }//header
 
-/* --- BUTTONS---*/
+/* --- BUTTONS removed---*/
 #chartSelectionDownload a:first-child{
 	display:none !important;
 }
-
+#selectionTableFooter a:first-child{
+	display:none !important;
+	}
 
 /* --- FOOTER ---*/
 .footer-container,footer{
