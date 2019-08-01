@@ -127,3 +127,26 @@ remote_theme: open-sdg/open-sdg@0.5.0
 # Apply any custom CSS.
 custom_css:
   - /assets/css/custom.css
+  
+# Mapping
+map_options:
+  tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
+  tileOptions:
+    id: mapbox.light
+    accessToken: pk.eyJ1IjoiaGlsb25nd2EiLCJhIjoiY2p1aHo1b3d3MGNqdjN5bjdvNzI0dHBneiJ9.aM68B6vgoOFooat27QGcoA
+    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://nsa.org.na/">NSA</a>
+  minZoom: 6
+map_layers:
+#Region
+  - min_zoom: 6
+    max_zoom: 10
+    serviceUrl: https://sustainabledevelopment-namibia.github.io/Site/Regions.geojson
+    nameProperty: rgnnm
+    idProperty: rgncd
+    staticBorders: false
+  - min_zoom: 11
+    max_zoom: 11
+    serviceUrl: https://sustainabledevelopment-namibia.github.io/Site/Regions.geojson
+    nameProperty: rgnnm
+    idProperty: rgncd
+    staticBorders: false
