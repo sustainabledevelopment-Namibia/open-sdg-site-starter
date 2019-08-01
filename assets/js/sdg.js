@@ -1167,8 +1167,8 @@ var mapView = function () {
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
-      mapOptions: null,
-      mapLayers: null,
+      mapOptions: {"tileURL":"https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}","tileOptions":{"id":"mapbox.light","accessToken":"pk.eyJ1IjoiaGlsb25nd2EiLCJhIjoiY2p1aHo1b3d3MGNqdjN5bjdvNzI0dHBneiJ9.aM68B6vgoOFooat27QGcoA","attribution":"<a href=\"https://www.mapbox.com\">Mapbox</a> | <a href=\"https://nsa.org.na/\">NSA</a>"},"minZoom":6},
+      mapLayers: [{"min_zoom":6,"max_zoom":10,"serviceUrl":"https://sustainabledevelopment-namibia.github.io/Site/Regions.geojson","nameProperty":"rgnnm","idProperty":"rgncd","staticBorders":false},{"min_zoom":11,"max_zoom":11,"serviceUrl":"https://sustainabledevelopment-namibia.github.io/Site/Regions.geojson","nameProperty":"rgnnm","idProperty":"rgncd","staticBorders":false}],
     });
   };
 };
